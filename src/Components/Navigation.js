@@ -1,7 +1,6 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap"; 
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import '../App.css';
 
 function Navigation(){
     return (
@@ -32,6 +31,10 @@ function Navigation(){
 
                         <LinkContainer to='/tour'>
                             <Nav.Link className='page-link-text'>Tour</Nav.Link>
+                        </LinkContainer>
+
+                        <LinkContainer to='/guestbook'>
+                            <Nav.Link className='page-link-text'>Guestbook</Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>

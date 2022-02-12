@@ -1,0 +1,31 @@
+@import "variables";
+// Import sub scss files here. Since we import app.scss in app.js, everything imported here will be given to app
+
+// Would recommend making this file just imports / very general app things and create a new scss file for specific stylings of pages
+
+.title-text {
+  font-family: $display;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.page-link-text {
+  font-family: $display;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.subtext {
+  font-family: $display;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.small-salt {
+  font-family: $display;
+}
+
+.footer-contain {
+  color: white;
+  background-color: black;
+}
