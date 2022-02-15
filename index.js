@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 
 const MONGODB_URI = "mongodb+srv://jadew33:jade@vanthemanguestbook.5wlis.mongodb.net/guestbook?retryWrites=true&w=majority";
 const routes = require('./routes/routes')
@@ -20,16 +20,16 @@ mongoose.connection.on('connected', () => {
 
 app.use(express.json());
 
-// app.use(express.static(path.join(__dirname, 'client/build')))
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 app.use('/api', routes);
 
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname + '/client/build/index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
