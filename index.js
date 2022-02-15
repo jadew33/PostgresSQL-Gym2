@@ -1,15 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config()
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const MONGODB_URI = "mongodb+srv://jadew33:jade@vanthemanguestbook.5wlis.mongodb.net/guestbook?retryWrites=true&w=majority";
 const routes = require('./routes/routes')
 
 
-mongoose.connect(process.env.MONGODB_URI || MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
