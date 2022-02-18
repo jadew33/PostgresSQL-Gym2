@@ -32,7 +32,8 @@ export default function App() {
           <Route path="/guestbook" element={<Guestbook />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
+        {/* Commented out bc mailchimp footer is still unstyled */}
+        {/* <Footer />  */}
       </div>
     </Router>
   );

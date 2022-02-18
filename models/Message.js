@@ -9,8 +9,8 @@ const PostSchema = new mongoose.Schema({
         required: true
     },
     dateTime: {
-        type: String,
-        default: Date.now()
+        type: Date,
+        required: true
     }
 })
 

@@ -1,0 +1,123 @@
+// TODO fade in / out based on scrolll pos
+
+.Guestbook {
+    display: flex;
+    justify-content: space-evenly;
+
+    height: 100vh;
+    width: 100vw;
+    margin-top: calc(6em - 3vh);
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        textarea {
+            min-height: 100px;
+        }
+        input,
+        textarea {
+            background-color: white;
+            font-size: 1.5em;
+            padding: 0 0.5em;
+            margin-bottom: 0.5em;
+            border: 2px solid $black;
+            border-radius: 10px;
+        }
+        label {
+            margin-block: 0.5em;
+            font-size: 1.75em;
+        }
+        button {
+            width: 40%;
+            align-self: center;
+
+            margin-top: 1em;
+            padding: 1em;
+            border-radius: 15px;
+
+            font-size: 1.25em;
+            font-family: $display;
+            font-weight: bold;
+
+            background-color: $highlight-red;
+            color: $off-white;
+            transition: 500ms ease-in-out all;
+            &:hover {
+                background-color: rgba($highlight-red, 0.85);
+            }
+        }
+        h1 {
+            font-family: $display;
+            font-size: 4em;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+    }
+    &__posts {
+        height: 85%;
+        width: 60%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-image: url('../Assets/VanTheManCartoonBackground.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .post {
+            border-radius: 15px;
+            width: 95%;
+            margin: 2em;
+            padding: 2em 0 1em 3em;
+            color: rgba(white,.9);
+            background-color: $highlight-red;
+            .date {
+                font-size: 1.25em;
+                color: rgba(white, 0.5);
+            }
+            p {
+                font-size: 2em;
+            }
+            > *{
+                background-color:  $highlight-red;
+            }
+        }
+        .reply {
+            width: 100%;
+            float: right;
+            padding: 2em 2em 1em 3em;
+            margin-top: 3em;
+            border-radius: 15px;
+            background-color: gray;
+            > *{
+                background-color: gray;
+            }
+        }
+    }
+}
+@media (max-width: $screen-lg) {
+    .Guestbook {
+        // flex-direction: column-reverse;
+        height: 70vh;
+        // &__form {
+        // width: 80%;
+        // }
+        // &__posts {
+        // width: 80%;
+        // height: 40%;
+        // }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .Guestbook {
+        flex-direction: column-reverse;
+        height: 100vh;
+        &__form {
+            width: 80%;
+        }
+        &__posts {
+            width: 80%;
+            height: 40%;
+        }
+    }
+}

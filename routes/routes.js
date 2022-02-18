@@ -4,9 +4,10 @@ const GuestbookPostingModel = require('../models/Message');
 
 // Routes prefixed with /api
 router.post('/insert', async (req, res) => {
-    const message = req.body.message;
-    const name = req.body.name;
-    const posting = new GuestbookPostingModel({ message: message, name: name });
+    const { message, name } = req.body.post;
+    // console.log(req.body.post)
+    const posting = new GuestbookPostingModel({ message: message, name: name, dateTime: new Date() });
+    console.log(posting)
     try {
         await posting.save();
         res.send("message saved");
@@ -16,14 +17,14 @@ router.post('/insert', async (req, res) => {
 })
 
 router.get('/read', async (req, res) => {
-    GuestbookPostingModel.find({}, (err, result) => {
-        if (err)
+    GuestbookPostingModel.find({}).sort({ dateTime: -1 })
+        .then((result) => {
+            res.json(result)
+        })
+        .catch(error => {
+            console.log(error)
             res.send(err)
-        // res.json(result);
-        res.send(result);
-        // console.log(result)
-        console.log("we sent result back")
-    })
+        })
 })
 
 module.exports = router;
