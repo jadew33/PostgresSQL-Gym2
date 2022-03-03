@@ -5,8 +5,8 @@ import '../App.css';
 
 function Navigation(){
     return (
-        <Navbar className="no-horizontal-padding" sticky="top" expand='md'>
-            <Container>
+        <Navbar className="top-horizontal-padding" sticky="top" expand='md'>
+            <Container className="full-width">
                 <LinkContainer to='/'>
                     <Navbar.Brand className='title-text' href="#home">Van<span className="subtext">The</span>Man</Navbar.Brand>
                 </LinkContainer>
