@@ -30,19 +30,6 @@ router.post('/addReply', async (req, res) => {
     }).catch(error => {
         res.send(error)
     });
-    // const posting = GuestbookPostingModel.findById(postId);
-    // console.log(posting.replies)
-    // try {
-    //     posting.replies.push({
-    //         name: name,
-    //         message: message,
-    //         dateTime: new Date()
-    //     });
-    //     await posting.save();
-    //     res.send("reply saved");
-    // } catch (err) {
-    //     res.send(posting)
-    // }
 })
 
 router.get('/read', async (req, res) => {
