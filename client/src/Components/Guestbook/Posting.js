@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { getFormattedDate } from "../../helpers/helpers";
-//import { fetchPosts } from "../pages/Guestbook"
 import PostReply from "./PostReply";
 import Axios from 'axios';
 
@@ -28,7 +27,6 @@ function Posting({ post }) {
             () => {
                 console.log("data has been saved");
                 resetUserInputs();
-               // fetchPosts();
             }
         ).catch(
             (err) => { console.log(err) }
