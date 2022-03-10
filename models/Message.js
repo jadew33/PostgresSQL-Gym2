@@ -15,6 +15,10 @@ const PostSchema = new mongoose.Schema({
     replies: {
         type: Array,
         default: []
+    },
+    parent: {
+        type: mongoose.Schema.Types.ObjectId,
+        default: null
     }
 })
 
