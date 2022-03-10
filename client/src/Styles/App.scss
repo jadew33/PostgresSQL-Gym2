@@ -53,3 +53,95 @@
 //   color: white;
 //   background-color: black !important;
 // }
+
+.title-text {
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.top-horizontal-padding{
+  width: 99%;
+}
+
+.long-navbar{
+  width: 99%;
+}
+
+.bottom-horizontal-padding{
+  margin-top: 1vh;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-right: -18.5vw;
+}
+
+.page-link-text {
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.subtext {
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.small-salt{
+  font-family: 'Rock Salt', cursive;
+}
+
+.reg-text{
+  font-family: 'Bebos Neue', cursive;
+  white-space: pre-wrap;
+  font-weight: bold;
+}
+
+.col-centered{
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.footer-contain{
+  color: white;
+  background-color: black;
+  padding-top: 2vh;
+}
+
+.social-icon{
+  margin-left: 0.25vw;
+  margin-right: 0.25vw;
+}
+
+.about-contain{
+  padding-top: 5vh;
+}
+
+.top-buffer{
+  margin-top: 4vh;
+}
+
+.about-image{
+  height: 20rem;
+}
+
+.home-image{
+  margin-top: 34vh;
+}
+
+.video-responsive {
+  margin-top: 7vh;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
