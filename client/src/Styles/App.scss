@@ -2,7 +2,7 @@
 // Import sub scss files here. Since we import app.scss in app.js, everything imported here will be given to app
 @import "Guestbook";
 
-// Would recommend making this file just imports / very general app things and create new scss files for specific stylings of pages
+// Would recommend making this file just imports / global app styles and create new scss files for specific stylings of pages
 
 .App {
   font-family: $default;
@@ -27,6 +27,7 @@
   border-radius: 20px;
 }
 
+// Global text styles
 .title-text {
   font-family: $display;
   font-weight: bold;
@@ -49,16 +50,18 @@
   font-family: $display;
 }
 
+.reg-text{
+  font-family: $default;
+  white-space: pre-wrap;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
 // .footer-contain {
 //   color: white;
 //   background-color: black !important;
 // }
-
-.title-text {
-  font-family: 'Rock Salt', cursive;
-  font-weight: bold;
-  font-size: 40px;
-}
 
 .top-horizontal-padding{
   width: 99%;
@@ -74,28 +77,6 @@
   left: 50%;
   right: 50%;
   margin-right: -18.5vw;
-}
-
-.page-link-text {
-  font-family: 'Rock Salt', cursive;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.subtext {
-  font-family: 'Rock Salt', cursive;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.small-salt{
-  font-family: 'Rock Salt', cursive;
-}
-
-.reg-text{
-  font-family: 'Bebos Neue', cursive;
-  white-space: pre-wrap;
-  font-weight: bold;
 }
 
 .col-centered{
