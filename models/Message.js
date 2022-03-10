@@ -11,6 +11,10 @@ const PostSchema = new mongoose.Schema({
     dateTime: {
         type: Date,
         required: true
+    },
+    replies: {
+        type: Array,
+        default: []
     }
 })
 

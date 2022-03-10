@@ -16,6 +16,22 @@ router.post('/insert', async (req, res) => {
     }
 })
 
+router.post('/addReply', async (req, res) => {
+    const postId = req.body.postId;
+    const { message, name } = req.body.reply;
+    GuestbookPostingModel.findById(postId).then((posting) => {
+        posting.replies.push({
+            name: name,
+            message: message,
+            dateTime: new Date()
+        });
+        posting.save();
+        res.send("reply saved");
+    }).catch(error => {
+        res.send(error)
+    });
+})
+
 router.get('/read', async (req, res) => {
     GuestbookPostingModel.find({}).sort({ dateTime: -1 })
         .then((result) => {
