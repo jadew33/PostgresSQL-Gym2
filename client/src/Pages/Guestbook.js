@@ -71,7 +71,7 @@ function Guestbook() {
             <button type='submit'>SUBMIT</button>
         </form>
         <div className='Guestbook__posts'>
-            {posts.length ? posts.map(post => <Posting post={post} key={post._id}/>)
+            {posts.length ? posts.map(post => <Posting post={post} fetchPosts={fetchPosts} key={post._id}/>)
                 : <h1>Sorry, something went wrong and we cannot fetch past posts :( Please try again later</h1>}
         </div>
     </div>);

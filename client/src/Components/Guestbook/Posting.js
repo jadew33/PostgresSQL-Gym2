@@ -3,7 +3,7 @@ import { getFormattedDate } from "../../helpers/helpers";
 import PostReply from "./PostReply";
 import Axios from 'axios';
 
-function Posting({ post }) {
+function Posting({ post, fetchPosts }) {
     const { name, message, dateTime, replies, _id } = post;
     const [showReplies] = useState(replies !== undefined);
     const [reply, setReply] = useState({
@@ -27,6 +27,7 @@ function Posting({ post }) {
             () => {
                 console.log("data has been saved");
                 resetUserInputs();
+                fetchPosts();
             }
         ).catch(
             (err) => { console.log(err) }

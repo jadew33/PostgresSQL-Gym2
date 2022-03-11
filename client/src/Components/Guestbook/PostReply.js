@@ -7,7 +7,7 @@ function PostReply({ reply }) {
         <p>{message}</p>
         <p className="date">{getFormattedDate(dateTime)}</p>
         {/* Unstyled but here so that you can set up on clicks */}
-        <button style={{ backgroundColor: 'white' }}> Reply To reply</button>
+        {/* <button style={{ backgroundColor: 'white' }}> Reply To reply</button> */}
     </div>);
 }
 
