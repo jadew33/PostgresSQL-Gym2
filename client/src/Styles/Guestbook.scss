@@ -26,7 +26,7 @@
         }
         label {
             margin-block: 0.5em;
-            font-size: 1.75em;
+            font-size: 1.5em;
         }
         button {
             width: 40%;
@@ -36,7 +36,7 @@
             padding: 1em;
             border-radius: 15px;
 
-            font-size: 1.25em;
+            font-size: 1em;
             font-family: $display;
             font-weight: bold;
 
@@ -49,7 +49,7 @@
         }
         h1 {
             font-family: $display;
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 0.5em;
             text-align: center;
         }
@@ -71,11 +71,11 @@
             color: rgba(white, 0.9);
             background-color: $highlight-red;
             .date {
-                font-size: 1.25em;
+                font-size: 1em;
                 color: rgba(white, 0.5);
             }
             p {
-                font-size: 2em;
+                font-size: 1.5em;
             }
             > * {
                 background-color: $highlight-red;
