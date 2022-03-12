@@ -12,7 +12,6 @@ function Guestbook() {
     // Fetch posts from MongoDB
     const fetchPosts = () => {
         Axios.get('/api/read').then((response) => {
-            console.log(response.data)
             setPosts(response.data);
         }).then(
             () => { console.log("data has been read") }
@@ -71,7 +70,8 @@ function Guestbook() {
             <button type='submit'>SUBMIT</button>
         </form>
         <div className='Guestbook__posts'>
-            {posts.length ? posts.map(post => <Posting post={post} fetchPosts={fetchPosts} key={post._id}/>)
+            {/* if current post has a parent, it's a reply, so don't include it in the posts */}
+            {posts.length ? posts.map(post => post.parent === undefined ? <Posting post={post} key={post._id} fetchPosts={fetchPosts}/> : null)
                 : <h1>Sorry, something went wrong and we cannot fetch past posts :( Please try again later</h1>}
         </div>
     </div>);

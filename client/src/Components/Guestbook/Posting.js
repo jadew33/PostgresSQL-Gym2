@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState} from "react";
 import { getFormattedDate } from "../../helpers/helpers";
 import PostReply from "./PostReply";
 import Axios from 'axios';

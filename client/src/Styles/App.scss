@@ -17,7 +17,7 @@
 }
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 1.25em;
+  width: 1em;
 }
 *::-webkit-scrollbar-track {
   background-color: $off-white;
@@ -54,7 +54,7 @@
   font-family: $default;
   white-space: pre-wrap;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
