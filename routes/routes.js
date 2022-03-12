@@ -19,10 +19,12 @@ router.post('/insert', async (req, res) => {
 router.post('/addReply', async (req, res) => {
     const postId = req.body.postId;
     const { message, name } = req.body.reply;
-    const reply = new GuestbookPostingModel({ message: message, name: name, dateTime: new Date(), parent: postId });
-    await reply.save();
     GuestbookPostingModel.findById(postId).then((posting) => {
-        posting.replies.push(reply);
+        posting.replies.push({
+            name: name,
+            message: message,
+            dateTime: new Date()
+        });
         posting.save();
         res.send("reply saved");
     }).catch(error => {

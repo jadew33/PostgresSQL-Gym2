@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { getFormattedDate } from "../../helpers/helpers";
-// import PostReply from "./PostReply";
+import PostReply from "./PostReply";
 import Axios from 'axios';
 
-function Posting({ post }) {
+function Posting({ post, fetchPosts }) {
     const { name, message, dateTime, replies, _id } = post;
     const [showReplies] = useState(replies !== undefined);
     const [reply, setReply] = useState({
@@ -27,6 +27,7 @@ function Posting({ post }) {
             () => {
                 console.log("data has been saved");
                 resetUserInputs();
+                fetchPosts();
             }
         ).catch(
             (err) => { console.log(err) }
@@ -45,7 +46,7 @@ function Posting({ post }) {
         <p >{message}</p >
         <p className="date">{getFormattedDate(dateTime)}</p>
         <div>
-            {showReplies && replies.map(reply => <Posting post={reply} key={_id}/>)}
+            {showReplies && replies.map(reply => <PostReply reply={reply} key={_id}/>)}
         </div>
 
         <form className='Guestbook__comment' onSubmit={handleSubmit}>
@@ -55,10 +56,11 @@ function Posting({ post }) {
 
             <input type="text" placeholder="Email" name="email" value={reply.email} onChange={handleInputChange} />
             {/* Unstyled but here so that you can set up on clicks */}
-            <button type='submit' style={{ backgroundColor: 'white' }}>Reply</button>
+            <button type='submit' style={{ backgroundColor: 'white' }}>Reply To message</button>
         </form>
+        
 
-        </div>);
+    </div>);
 }
 
 export default Posting;
