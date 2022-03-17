@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Posting from '../Components/Guestbook/Posting';
+import validator from 'validator';
 
 function Guestbook() {
 
@@ -26,7 +27,13 @@ function Guestbook() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        sendPost();
+        if (!validator.isEmpty(post.name) && !validator.isEmpty(post.message) && validator.isEmail(post.email)) {
+            sendPost();
+        } else if (!validator.isEmail(post.email)) {
+            console.log('invalid email entered')
+        } else {
+            console.log('one or more fields empty')
+        }
     }
 
     const sendPost = () => {

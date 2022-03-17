@@ -2,6 +2,7 @@ import { useState} from "react";
 import { getFormattedDate } from "../../helpers/helpers";
 import PostReply from "./PostReply";
 import Axios from 'axios';
+import validator from 'validator'
 
 function Posting({ post, fetchPosts }) {
     const { name, message, dateTime, replies, _id } = post;
@@ -19,7 +20,13 @@ function Posting({ post, fetchPosts }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        sendReply();
+        if (!validator.isEmpty(reply.name) && !validator.isEmpty(reply.message) && validator.isEmail(reply.email)) {
+            sendReply();
+        } else if (!validator.isEmail(reply.email)) {
+            console.log('invalid email entered')
+        } else {
+            console.log('one or more fields empty')
+        }    
     }
 
     const sendReply = () => {
