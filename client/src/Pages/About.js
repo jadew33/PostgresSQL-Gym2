@@ -3,6 +3,7 @@ import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import aboutImage from "../Assets/Images/about_page.png";
 import { IconContext } from "react-icons";
 import { BsYoutube, BsInstagram, BsFacebook } from "react-icons/bs";
+import tiktok from '../Assets/tik-tok.png';
 
 function About(){
     return (
@@ -52,10 +53,13 @@ function About(){
                                     <BsInstagram className="social-icon" />
                                 </Button>
 
-                                <Button variant='outline-link'>
+                                <Button href="https://www.facebook.com/VanTheManOfficial" variant='outline-link'>
                                     <BsFacebook className="social-icon" />
                                 </Button>
                             
+                                <Button href="https://www.tiktok.com/@vantheman_official" variant='outline-link'>
+                                    <img src={tiktok} alt="tiktok icon" style={{height: '50px'}}/>
+                                </Button>
                             </IconContext.Provider>
                             
                         </Col>

@@ -9,10 +9,10 @@ function Home() {
             <Container fluid='md'>
                 <Row>
                     <Col>
-                        <img src={homePageImage} className='home-image'/>
+                        <img src={homePageImage} className='home-image'alt='Van The Man'/>
                     </Col>
                     <Col>
-                        <YoutubeEmbed embedId={'5GrAPrapSqs'} />
+                        <YoutubeEmbed embedId="5GrAPrapSqs" />
                     </Col>
                 </Row>
             </Container>
