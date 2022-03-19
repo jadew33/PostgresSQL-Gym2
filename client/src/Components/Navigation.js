@@ -24,11 +24,9 @@ function Navigation(){
                         <LinkContainer to='/gallery'>
                             <Nav.Link className='page-link-text'>Photos</Nav.Link>
                         </LinkContainer>
-                        
-                        <LinkContainer to='/shop'>
-                            <Nav.Link className='page-link-text'>Shop</Nav.Link>
-                        </LinkContainer>
 
+                        <a className="page-link-text special-nav" href="https://www.etsy.com/ca/">Shop</a>
+                        
                         <LinkContainer to='/tour'>
                             <Nav.Link className='page-link-text'>Tour</Nav.Link>
                         </LinkContainer>

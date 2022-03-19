@@ -38,6 +38,7 @@
   font-family: $display;
   font-weight: bold;
   font-size: 25px;
+  margin-inline: 0.5em;
 }
 
 .subtext {
@@ -53,7 +54,7 @@
   background-color: black;
 }
 
-.reg-text{
+.reg-text {
   font-family: $default;
   white-space: pre-wrap;
   font-weight: bold;
@@ -70,29 +71,35 @@
 }
 
 
-.col-centered{
+.col-centered {
   margin-left: 0%;
   margin-right: 0%;
 }
 
-.social-icon{
+.footer-contain {
+  color: white;
+  background-color: black;
+  padding-top: 2vh;
+}
+
+.social-icon {
   margin-left: 0.25vw;
   margin-right: 0.25vw;
 }
 
-.about-contain{
+.about-contain {
   padding-top: 5vh;
 }
 
-.top-buffer{
+.top-buffer {
   margin-top: 4vh;
 }
 
-.about-image{
+.about-image {
   height: 20rem;
 }
 
-.home-image{
+.home-image {
   margin-top: 34vh;
 }
 

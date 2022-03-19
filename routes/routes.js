@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const GuestbookPostingModel = require('../models/Message');
+const validator = require('validator');
 
 // Routes prefixed with /api
 router.post('/insert', async (req, res) => {
-    const { message, name } = req.body.post;
-    // console.log(req.body.post)
-    const posting = new GuestbookPostingModel({ message: message, name: name, dateTime: new Date() });
+    const { message, name, email } = req.body.post;
+    if (!validator.isEmail(email) || validator.isEmpty(name) || validator.isEmpty(message)) {
+        res.status(422).json({ msg: 'Invalid input submitted, please try again' })
+    }
+    const posting = new GuestbookPostingModel({ message: message, name: name, email: email, dateTime: new Date() });
     console.log(posting)
     try {
         await posting.save();
@@ -18,11 +21,15 @@ router.post('/insert', async (req, res) => {
 
 router.post('/addReply', async (req, res) => {
     const postId = req.body.postId;
-    const { message, name } = req.body.reply;
+    const { message, name, email } = req.body.reply;
+    if (!validator.isEmail(email) || validator.isEmpty(name) || validator.isEmpty(message)) {
+        res.status(422).json({ msg: 'Invalid input submitted, please try again' })
+    }
     GuestbookPostingModel.findById(postId).then((posting) => {
         posting.replies.push({
             name: name,
             message: message,
+            email: email,
             dateTime: new Date()
         });
         posting.save();

@@ -8,6 +8,10 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    email: {
+        type: String,
+        required: true
+    },
     dateTime: {
         type: Date,
         required: true

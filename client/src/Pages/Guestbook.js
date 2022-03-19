@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Posting from '../Components/Guestbook/Posting';
+import validator from 'validator';
 
 function Guestbook() {
 
     const [posts, setPosts] = useState([]);
     const [post, setPost] = useState({
         name: "", message: "", email: ""
+    })
+    const [error, setError] = useState({
+        showError: false, errorMessage: ""
     })
 
     // Fetch posts from MongoDB
@@ -26,25 +30,27 @@ function Guestbook() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        sendPost();
+        if (!validator.isEmpty(post.name) && !validator.isEmpty(post.message) && validator.isEmail(post.email)) {
+            sendPost();
+            setError({ showError: false, errorMessage: '' })
+        } else if (!validator.isEmail(post.email)) {
+            setError({ showError: true, errorMessage: 'Invalid email entered' })
+        } else {
+            setError({ showError: true, errorMessage: 'One or more fields empty' })
+        }
     }
 
     const sendPost = () => {
         Axios.post('/api/insert', { post: post }).then(
             () => {
-                console.log("data has been saved");
-                resetUserInputs();
+                setPost({
+                    name: "", message: "", email: ""
+                })
                 fetchPosts();
             }
         ).catch(
             () => { console.log("Sorry, internal server error. Please try again soon") }
         );
-    }
-
-    const resetUserInputs = () => {
-        setPost({
-            name: "", message: "", email: ""
-        })
     }
 
     const handleInputChange = (event) => {
@@ -66,13 +72,17 @@ function Guestbook() {
 
             <label htmlFor='email'>Your email* (This information will not be publicly displayed)</label>
             <input type="text" placeholder="Email" name="email" value={post.email} onChange={handleInputChange} />
-
-            <button type='submit'>SUBMIT</button>
+            {
+                error.showError && <label className="error-message main-error">{error.errorMessage}</label>
+            }
+            <button className="submit-button" type='submit'>SUBMIT</button>
         </form>
         <div className='Guestbook__posts'>
             {/* if current post has a parent, it's a reply, so don't include it in the posts */}
-            {posts.length ? posts.map(post => post.parent === undefined ? <Posting post={post} key={post._id} fetchPosts={fetchPosts}/> : null)
-                : <h1>Sorry, something went wrong and we cannot fetch past posts :( Please try again later</h1>}
+            {posts.length ? posts.map(post => post.parent === undefined
+                ? <Posting post={post} key={post._id} fetchPosts={fetchPosts} />
+                : null)
+                : <h1 className='main-error'>Sorry, something went wrong and we cannot fetch past posts :( Please try again later</h1>}
         </div>
     </div>);
 }

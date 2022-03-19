@@ -1,8 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-function YoutubeEmbed (embedId){
-
+function YoutubeEmbed ({embedId}){
     return (
         <div className="video-responsive">
             <iframe
