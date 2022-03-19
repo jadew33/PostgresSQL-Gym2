@@ -38,6 +38,7 @@
   font-family: $display;
   font-weight: bold;
   font-size: 25px;
+  margin-inline: 0.5em;
 }
 
 .subtext {
@@ -50,7 +51,7 @@
   font-family: $display;
 }
 
-.reg-text{
+.reg-text {
   font-family: $default;
   white-space: pre-wrap;
   font-weight: bold;
@@ -58,20 +59,11 @@
   letter-spacing: 1px;
 }
 
-// .footer-contain {
-//   color: white;
-//   background-color: black !important;
-// }
-
-.top-horizontal-padding{
+.top-horizontal-padding {
   width: 99%;
 }
 
-.long-navbar{
-  width: 99%;
-}
-
-.bottom-horizontal-padding{
+.bottom-horizontal-padding {
   margin-top: 1vh;
   width: 100vw;
   left: 50%;
@@ -79,35 +71,35 @@
   margin-right: -18.5vw;
 }
 
-.col-centered{
+.col-centered {
   margin-left: 0%;
   margin-right: 0%;
 }
 
-.footer-contain{
+.footer-contain {
   color: white;
   background-color: black;
   padding-top: 2vh;
 }
 
-.social-icon{
+.social-icon {
   margin-left: 0.25vw;
   margin-right: 0.25vw;
 }
 
-.about-contain{
+.about-contain {
   padding-top: 5vh;
 }
 
-.top-buffer{
+.top-buffer {
   margin-top: 4vh;
 }
 
-.about-image{
+.about-image {
   height: 20rem;
 }
 
-.home-image{
+.home-image {
   margin-top: 34vh;
 }
 
@@ -125,4 +117,17 @@
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.special-nav {
+  text-decoration: none;
+  margin-top: 0.25em;
+  color: rgba(black, 0.55);
+  &:hover {
+    color: rgba(black, 0.7);
+  }
+  @media (max-width: $screen-sm) {
+    margin-top: 0;
+    margin-left: .5em;
+  }
 }
