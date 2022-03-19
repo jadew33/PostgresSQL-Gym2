@@ -48,6 +48,9 @@
 
 .small-salt {
   font-family: $display;
+  margin-bottom: 0;
+  padding-bottom: 2vh;
+  background-color: black;
 }
 
 .reg-text{
@@ -58,11 +61,6 @@
   letter-spacing: 1px;
 }
 
-// .footer-contain {
-//   color: white;
-//   background-color: black !important;
-// }
-
 .top-horizontal-padding{
   width: 99%;
 }
@@ -71,23 +69,10 @@
   width: 99%;
 }
 
-.bottom-horizontal-padding{
-  margin-top: 1vh;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-right: -18.5vw;
-}
 
 .col-centered{
   margin-left: 0%;
   margin-right: 0%;
-}
-
-.footer-contain{
-  color: white;
-  background-color: black;
-  padding-top: 2vh;
 }
 
 .social-icon{
@@ -125,4 +110,52 @@
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+#mc_embed_signup{
+  width: 100%;
+  padding: 0;
+}
+
+#mc_embed_signup_scroll {
+  background-color: black;
+}
+
+.mc-field-group {
+  background: black;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  padding-top: 2vh;
+}
+
+.input-field {
+  background-color: white;
+}
+
+.indicates-required {
+  background-color: black;
+}
+
+label {
+  background-color: black;
+  color: white;
+}
+
+.row {
+  background-color: black;
+}
+
+.separate-row {
+  background-color: white;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-row {
+  background-color: white;
 }
