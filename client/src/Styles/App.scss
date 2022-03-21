@@ -6,7 +6,6 @@
 
 .App {
   font-family: $default;
-  overflow-x: hidden;
 }
 
 /* Works on Firefox */
@@ -91,6 +90,7 @@
   padding-top: 5vh;
 }
 
+
 .top-buffer {
   margin-top: 4vh;
 }
@@ -130,4 +130,75 @@
     margin-top: 0;
     margin-left: .5em;
   }
+}
+
+.music-contain{
+  padding-top: 3vh;
+  height:vmax;
+}
+
+.music-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.music-row{
+  padding-left: 18vh;
+  padding-top: 2vh;
+}
+
+.music-row2{
+  padding-left: 38vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.music-row2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.music-col{
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.music-col2 {
+  float: left;
+  width: 40%;
+  padding: 5px;
+}
+
+.album{
+  border-radius: 20px;
+  height: 220px;
+}
+.icons-row{
+  padding-left: 10%;
+  width: 80%;
+  padding-top: 10px;
+}
+
+.icons-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.icon-col{
+  float:left;
+  width: 35%;
+}
+
+.icon{
+  width: 50px;
+}
+
+iframe{
+  border-radius: 20px;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }
