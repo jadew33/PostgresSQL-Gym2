@@ -1,0 +1,44 @@
+.home-page {
+    position: relative;
+    height: 100vh;
+}
+
+.home-image {
+    position: absolute;
+    bottom: 0;
+    width: 50vw;
+    z-index: 1;
+    @media (max-width: $screen-md) {
+        width: 100vw;
+    }
+}
+
+.video-responsive {
+    margin-top: 2em;
+    margin-right: 5em;
+    position: relative;
+    z-index: 2;
+    float: right;
+    iframe {
+        right: 0;
+        top: 0;
+        height: 300px;
+        width: 600px;
+        position: absolute;
+        border-radius: 8px;
+    }
+    @media (max-width: $screen-md) {
+        margin-right: 0;
+        iframe {
+            height: 250px;
+            width: 400px;
+        }
+    }
+    @media (max-width: $screen-sm) {
+        iframe {
+            height: 35vh;
+            width: 94vw;
+            margin-inline: 3vw;
+        }
+    }
+}
