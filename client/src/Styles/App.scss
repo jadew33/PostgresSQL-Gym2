@@ -2,18 +2,20 @@
 // Import sub scss files here. Since we import app.scss in app.js, everything imported here will be given to app
 @import "Guestbook";
 @import "Home";
+@import "Footer";
+@import "About";
 // Would recommend making this file just imports / global app styles and create new scss files for specific stylings of pages
 
 .App {
   font-family: $default;
   overflow: hidden;
+  background-color: $off-white;
 }
 
 /* Works on Firefox */
 * {
   scrollbar-width: auto; /* "auto" or "thin" */
   scrollbar-color: $highlight-red $off-white; /* scroll thumb and track */
-  background-color: $off-white;
 }
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -51,7 +53,6 @@
   font-family: $display;
   margin-bottom: 0;
   padding-bottom: 2vh;
-  background-color: black;
 }
 
 .reg-text {
@@ -62,80 +63,20 @@
   letter-spacing: 1px;
 }
 
-.top-horizontal-padding{
+.top-horizontal-padding {
   width: 99%;
 }
 
-.long-navbar{
+.long-navbar {
   width: 99%;
 }
-
 
 .col-centered {
   margin-left: 0%;
   margin-right: 0%;
 }
 
-.footer-contain {
-  color: white;
-  background-color: black;
-  padding-top: 2vh;
-}
 
-.social-icon {
-  margin-left: 0.25vw;
-  margin-right: 0.25vw;
-}
-
-.about-contain {
-  padding-top: 5vh;
-}
-
-
-.top-buffer {
-  margin-top: 4vh;
-}
-
-.about-image {
-  height: 20rem;
-}
-
-#mc_embed_signup{
-  width: 100%;
-  padding: 0;
-}
-
-#mc_embed_signup_scroll {
-  background-color: black;
-}
-
-.mc-field-group {
-  background: black;
-}
-
-.footer {
-  color: white;
-  background-color: black;
-  padding-top: 2vh;
-}
-
-.input-field {
-  background-color: white;
-}
-
-.indicates-required {
-  background-color: black;
-}
-
-// label {
-//   background-color: black;
-//   color: white;
-// }
-
-
-// .row {
-  // background-color: black;
-// }
 
 // .separate-row {
 //   background-color: white;
@@ -149,9 +90,9 @@
 //   background-color: white;
 // }
 
-.music-contain{
+.music-contain {
   padding-top: 3vh;
-  height:vmax;
+  height: vmax;
 }
 
 .music-row::after {
@@ -160,12 +101,12 @@
   display: table;
 }
 
-.music-row{
+.music-row {
   padding-left: 18vh;
   padding-top: 2vh;
 }
 
-.music-row2{
+.music-row2 {
   padding-left: 38vh;
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -176,7 +117,7 @@
   display: table;
 }
 
-.music-col{
+.music-col {
   float: left;
   width: 33.33%;
   padding: 5px;
@@ -188,11 +129,11 @@
   padding: 5px;
 }
 
-.album{
+.album {
   border-radius: 20px;
   height: 220px;
 }
-.icons-row{
+.icons-row {
   padding-left: 10%;
   width: 80%;
   padding-top: 10px;
@@ -203,12 +144,12 @@
   clear: both;
   display: table;
 }
-.icon-col{
-  float:left;
+.icon-col {
+  float: left;
   width: 35%;
 }
 
-.icon{
+.icon {
   width: 50px;
 }
 
@@ -221,6 +162,6 @@
   }
   @media (max-width: $screen-sm) {
     margin-top: 0;
-    margin-left: .5em;
+    margin-left: 0.5em;
   }
 }

@@ -8,14 +8,14 @@ import tiktok from '../Assets/tik-tok.png';
 function About(){
     return (
             <>
-                <Container fluid="sm" className="about-contain">
+                <Container fluid="sm" className="about-container">
                     <Row>
                         <Col className="subtext">
                             About
                         </Col>
                     </Row>
-                    <Row className="top-buffer">
-                        <Col className="reg-text" xs={8}>
+                    <Row className="top-buffer text-img-container">
+                        <Col className="reg-text" xs={10} lg={8}>
                             <p>
                             Van The Man is a singer and multi-instrumentalist springing onto the scene from Peterborough, Ontario. His love for music comes from a diverse record collection, taking influences from artists like Tyler The Creator, Blur, Beck, and Wiz Khalifa to carve out a unique sound all his own. Saturated, beat driven, hook laden pop songs, delivered with a distinct voice and a flair for instrumentation.
                             <br />
@@ -36,11 +36,11 @@ function About(){
                             </p>
                             
                         </Col>
-                        <Col>
+                        <Col sm={10} lg={4}>
                             <Image src={aboutImage} className="about-image"/>
                         </Col>
                     </Row>
-                    <Row className="top-buffer">
+                    <Row className="icons-container">
                         <Col>
                             <IconContext.Provider
                                 value={{ size: "50px"}}

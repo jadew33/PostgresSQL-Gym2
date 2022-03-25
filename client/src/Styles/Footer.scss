@@ -1,0 +1,47 @@
+.footer {
+    padding: 30px 10px 20px;
+    background-color: black;
+    h2,
+    label {
+        color: $off-white;
+    }
+
+    label {
+        margin-right: 5px;
+    }
+
+    .mc-field-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button{
+        font-family: $display;
+        padding: 5px 15px;
+        opacity: 1;
+        transition: all 350ms ease-in-out;
+        &:hover{
+            opacity: .9;
+        }
+        @media (max-width: $screen-md) {
+            font-size: smaller;
+        }
+    }
+
+    .input-field {
+        background-color: white;
+    }
+
+}
+
+@media (max-width: $screen-sm) {
+    .footer {
+        .mc-field-group{
+            margin-block: 10px;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+}
