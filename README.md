@@ -1,6 +1,10 @@
 # w22-van-the-man
 
-How to clone and run this repo locally (code editor like vscode required) and then use the terminal
+Van, if you want to update your website or hire freelancers, fork the repo and then deploy the new edited project using a platform of your choice
+
+How to clone and run this repo locally (code editor like vscode required) 
+
+Using the terminal,
 
 Clone the repo:
 
