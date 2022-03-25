@@ -25,7 +25,7 @@ function Navigation(){
                             <Nav.Link className='page-link-text'>Photos</Nav.Link>
                         </LinkContainer>
 
-                        <a className="page-link-text special-nav" href="https://www.etsy.com/ca/">Shop</a>
+                        <a className="page-link-text special-nav" href="https://vanthemanmerch.square.site/">Shop</a>
                         
                         <LinkContainer to='/tour'>
                             <Nav.Link className='page-link-text'>Tour</Nav.Link>
