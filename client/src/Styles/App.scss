@@ -6,13 +6,14 @@
 
 .App {
   font-family: $default;
+  overflow: hidden;
+  background-color: $off-white;
 }
 
 /* Works on Firefox */
 * {
   scrollbar-width: auto; /* "auto" or "thin" */
   scrollbar-color: $highlight-red $off-white; /* scroll thumb and track */
-  background-color: $off-white;
 }
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -90,6 +91,22 @@
   padding-top: 5vh;
 }
 
+.tour-contain {
+    background-color: $off-white;
+}
+
+.tour-text {
+    background-color: #00B4D8;
+    width: 30vw;
+    min-width: 250px;
+    font-family: $default;
+    white-space: pre-wrap;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    border-radius: 10px;
+}
 
 .top-buffer {
   margin-top: 4vh;
@@ -97,6 +114,12 @@
 
 .about-image {
   height: 20rem;
+}
+
+.tour-image {
+    width: 50vw;
+    min-width: 400px;
+    margin-right: 8vh;
 }
 
 .home-image {
@@ -149,10 +172,6 @@
 label {
   background-color: black;
   color: white;
-}
-
-.row {
-  background-color: black;
 }
 
 .separate-row {
