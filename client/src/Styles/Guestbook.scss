@@ -210,3 +210,39 @@
         }
     }
 }
+
+#mc_embed_signup{
+    width: 100%;
+    padding: 0;
+  }
+  
+#mc_embed_signup_scroll {
+    background-color: black;
+}
+
+.mc-field-group {
+    background: black;
+}
+
+.footer {
+    color: white;
+    background-color: black;
+    padding-top: 2vh;
+
+    label {
+        background-color: black;
+        color: white;
+    }
+    
+    .row {
+        background-color: black;
+    }
+}
+
+.input-field {
+    background-color: white;
+}
+
+.indicates-required {
+    background-color: black;
+}
