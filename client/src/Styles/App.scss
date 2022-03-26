@@ -1,6 +1,7 @@
 @import "variables";
 // Import sub scss files here. Since we import app.scss in app.js, everything imported here will be given to app
 @import "Guestbook";
+@import "Tour";
 
 // Would recommend making this file just imports / global app styles and create new scss files for specific stylings of pages
 
@@ -91,23 +92,6 @@
   padding-top: 5vh;
 }
 
-.tour-contain {
-    background-color: $off-white;
-}
-
-.tour-text {
-    background-color: #00B4D8;
-    width: 30vw;
-    min-width: 250px;
-    font-family: $default;
-    white-space: pre-wrap;
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: 1px;
-    text-align: center;
-    border-radius: 10px;
-}
-
 .top-buffer {
   margin-top: 4vh;
 }
@@ -115,13 +99,6 @@
 .about-image {
   height: 20rem;
 }
-
-.tour-image {
-    width: 50vw;
-    min-width: 400px;
-    margin-right: 8vh;
-}
-
 .home-image {
   margin-top: 34vh;
 }

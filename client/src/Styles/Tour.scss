@@ -1,0 +1,22 @@
+.tour-contain {
+    background-color: $off-white;
+}
+
+.tour-text {
+    background-color: #00B4D8;
+    width: 30vw;
+    min-width: 250px;
+    font-family: $default;
+    white-space: pre-wrap;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tour-image {
+    width: 50vw;
+    min-width: 400px;
+    margin-right: 8vh;
+}
