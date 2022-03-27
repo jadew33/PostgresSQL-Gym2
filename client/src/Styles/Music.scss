@@ -1,0 +1,61 @@
+.music-contain{
+    padding-top: 3vh;
+    height:vmax;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.album img{
+    border-radius: 20px;
+    height: 220px;
+}
+.icon{
+    width: 50px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 20px ;
+}
+.top-space{
+    margin-top: 4vh;
+}
+.bot-space{
+    margin-top: 2vh;
+}
+.music-row{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.music-col{
+    flex-basis: 33.33%;
+    margin-bottom: 3vh;
+    padding-top: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.icon-box{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.album img:hover{
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3);
+}
+.icon-box img:hover{
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+iframe{
+    border-radius: 20px;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
