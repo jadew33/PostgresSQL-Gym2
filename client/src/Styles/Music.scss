@@ -16,6 +16,13 @@
     margin-left: 20px;
     margin-right: 20px ;
 }
+.icon2{
+    width: 100px;
+}
+p{
+    font-size: 25px;
+}
+
 .top-space{
     margin-top: 4vh;
 }
@@ -31,6 +38,7 @@
     padding-bottom: 0;
     margin-bottom: 0;
 }
+
 
 .music-col{
     flex-basis: 33.33%;
@@ -50,20 +58,83 @@
 .icon-box img:hover{
     box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3);
 }
+.icon2{
+    border-radius: 50px;
+}
+.icon2:hover{
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3);
+}
 
-iframe{
-    border-radius: 20px;
+.bot-player{
     width: 100%;
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
 }
 
+iframe{
+    border-radius: 20px;
+}
+
+.line-2 {
+    border-top: 1px solid black;
+    transform: rotate(0.2deg);
+  }
+
+.more-icons{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 0;
+    margin-bottom: 3vh;
+    text-align: center;
+}
+.mob-icon-row1{
+    display: none;
+}
+.mob-icon-row2{
+    display: none;
+}
+
 @media (max-width: 1000px){
     .music-row{
         flex-direction: column;
     }
-    iframe{
-        margin-left: 1.2vh;
+    .icon2{
+        width: 70px;
+    }
+    p{
+        font-size: 19px;
+    }
+    .more-icons{
+        display: none;
+    }
+    .mob-icon-row1{
+        margin-top: 2vh;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 25%;
+        padding-right: 25%;
+        padding-bottom: 0;
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+    .mob-icon-row2{
+        margin-top: 2vh;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 0;
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+
+    .more-music iframe{
+        width: 85%;
     }
 }

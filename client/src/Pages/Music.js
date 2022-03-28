@@ -5,9 +5,13 @@ import vibin from "../Assets/Music/vibin.png";
 import linkup from "../Assets/Music/linkup.png";
 import daisies from "../Assets/Music/daisies.png";
 import alright from "../Assets/Music/alright.png";
+import notsay from "../Assets/Music/notsay.png";
+
 import spotify from "../Assets/Music/spotify.png";
 import itunes from "../Assets/Music/itunes.png";
-import notsay from "../Assets/Music/notsay.png";
+import amazon from "../Assets/Music/amazon-music.png";
+import deezer from "../Assets/Music/deezer.png";
+import youtube from "../Assets/Music/youtube.png";
 
 
 function Music(){
@@ -90,8 +94,82 @@ function Music(){
 
             </div>
             <div className="bot-space"></div>
-            
+
+
+            <div class="line-2"></div>
+            <div className="bot-space"></div>
+            <Row>
+                    <Col className = "subtext">
+                        More Music
+                    </Col>
+             </Row>
+             <div className="top-space"></div>
+
+
+
+            <div className="more-icons">
+                <div className="icon-col">
+                    <a href="https://open.spotify.com/artist/4U1YsHkovFUGPHIrnF89bj?si=lGwy6wmkQOGykJaZxEswIw"> <Image src={spotify} className="icon2"/> </a> 
+                    <p>Spotify</p>
+                </div>
+                <div className="icon-col">
+                    <a href="https://music.apple.com/ca/artist/van-the-man/1526310747?ign-itscg=30440&ign-itsct=catchall_p1"> <Image src={itunes} className="icon2"/> </a> 
+                    <p>Apple Music</p>
+                </div> 
+                <div className="icon-col">
+                    <a href="https://www.youtube.com/channel/UCXO6tLw7YeT2Qy2CRuoAgtg"> <Image src={youtube} className="icon2"/> </a> 
+                    <p>Youtube</p>
+                </div> 
+                <div className="icon-col">
+                    <a href="https://www.deezer.com/en/artist/102965942"> <Image src={deezer} className="icon2"/> </a> 
+                    <p>Deezer</p>
+                </div> 
+                <div className="icon-col">
+                    <a href="https://music.amazon.ca/artists/B08F81XK9W/van-the-man"> <Image src={amazon} className="icon2"/> </a> 
+                    <p>Amazon Music</p>
+                </div> 
+            </div>
+
+            <div className="mob-icon-row1">
+                <div className="icon-col">
+                    <a href="https://open.spotify.com/artist/4U1YsHkovFUGPHIrnF89bj?si=lGwy6wmkQOGykJaZxEswIw"> <Image src={spotify} className="icon2"/> </a> 
+                    <p>Spotify</p>
+                </div>
+                <div className="icon-col">
+                    <a href="https://music.apple.com/ca/artist/van-the-man/1526310747?ign-itscg=30440&ign-itsct=catchall_p1"> <Image src={itunes} className="icon2"/> </a> 
+                    <p>Apple Music</p>
+                </div> 
+
+            </div>
+
+            <div className="mob-icon-row2">
+                <div className="icon-col">
+                    <a href="https://www.youtube.com/channel/UCXO6tLw7YeT2Qy2CRuoAgtg"> <Image src={youtube} className="icon2"/> </a> 
+                    <p>Youtube</p>
+                </div> 
+                <div className="icon-col">
+                    <a href="https://www.deezer.com/en/artist/102965942"> <Image src={deezer} className="icon2"/> </a> 
+                    <p>Deezer</p>
+                </div> 
+                
+                <div className="icon-col">
+                    <a href="https://music.amazon.ca/artists/B08F81XK9W/van-the-man"> <Image src={amazon} className="icon2"/> </a> 
+                    <p>Amazon Music</p>
+                </div> 
+            </div> 
+
+
+
+            <div className="more-music">
+            <iframe src="https://open.spotify.com/embed/artist/4U1YsHkovFUGPHIrnF89bj?utm_source=generator" width="50%" height="280" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            <div className="bot-space"></div>
+
+            <div className="bot-player">
             <iframe src="https://open.spotify.com/embed/track/1wK7LQCjsY8Ix61LFqIwGv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            
+            
             </Container>
 
      
