@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import vogue from "../Assets/Music/vogue.png";
 import vibin from "../Assets/Music/vibin.png";
 import linkup from "../Assets/Music/linkup.png";
@@ -161,12 +161,12 @@ function Music(){
 
 
             <div className="more-music">
-            <iframe src="https://open.spotify.com/embed/artist/4U1YsHkovFUGPHIrnF89bj?utm_source=generator" width="50%" height="280" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe src="https://open.spotify.com/embed/artist/4U1YsHkovFUGPHIrnF89bj?utm_source=generator" width="50%" height="280" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="song-player"></iframe>
             </div>
             <div className="bot-space"></div>
 
             <div className="bot-player">
-            <iframe src="https://open.spotify.com/embed/track/1wK7LQCjsY8Ix61LFqIwGv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe src="https://open.spotify.com/embed/track/1wK7LQCjsY8Ix61LFqIwGv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="spotify-player"></iframe>
             </div>
             
             
