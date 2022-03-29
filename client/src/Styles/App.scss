@@ -5,8 +5,8 @@
 @import "Footer";
 @import "About";
 @import "Tour";
-
-// Would recommend making this file just imports / global app styles and create new scss files for specific stylings of pages
+@import "Gallery";
+@import "Navigation";
 
 .App {
   font-family: $default;
