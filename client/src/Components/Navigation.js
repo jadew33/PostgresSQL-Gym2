@@ -4,7 +4,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function Navigation(){
     return (
-        <Navbar className="top-horizontal-padding" sticky="top" expand='md'>
+        <Navbar className="top-horizontal-padding" sticky="top" expand='lg'>
             <Container className="full-width">
                 <LinkContainer to='/'>
                     <Navbar.Brand className='title-text' href="#home">Van<span className="subtext">The</span>Man</Navbar.Brand>

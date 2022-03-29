@@ -1,10 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap';
-
-// I know this is super inefficient but mainly wanted to have it done before
-// optimising - will replace it with a list read from the folder and then have 
-// a map function to generate "photoPiece" components
-
 import galImg1 from '../Assets/Images/gal_1.png';
 import galImg2 from '../Assets/Images/gal_2.png';
 import galImg3 from '../Assets/Images/gal_3.png';
