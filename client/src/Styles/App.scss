@@ -7,6 +7,9 @@
 @import "Tour";
 @import "Gallery";
 @import "Navigation";
+@import "Music";
+
+// Would recommend making this file just imports / global app styles and create new scss files for specific stylings of pages
 
 .App {
   font-family: $default;
@@ -78,92 +81,3 @@
   margin-right: 0%;
 }
 
-
-
-// .separate-row {
-//   background-color: white;
-//   padding-top: 4vh;
-//   padding-bottom: 4vh;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .image-row {
-//   background-color: white;
-// }
-
-.music-contain {
-  padding-top: 3vh;
-  height: vmax;
-}
-
-.music-row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.music-row {
-  padding-left: 18vh;
-  padding-top: 2vh;
-}
-
-.music-row2 {
-  padding-left: 38vh;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-.music-row2::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.music-col {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-.music-col2 {
-  float: left;
-  width: 40%;
-  padding: 5px;
-}
-
-.album {
-  border-radius: 20px;
-  height: 220px;
-}
-.icons-row {
-  padding-left: 10%;
-  width: 80%;
-  padding-top: 10px;
-}
-
-.icons-row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.icon-col {
-  float: left;
-  width: 35%;
-}
-
-.icon {
-  width: 50px;
-}
-
-.special-nav {
-  text-decoration: none;
-  margin-top: 0.25em;
-  color: rgba(black, 0.55);
-  &:hover {
-    color: rgba(black, 0.7);
-  }
-  @media (max-width: $screen-sm) {
-    margin-top: 0;
-    margin-left: 0.5em;
-  }
-}
