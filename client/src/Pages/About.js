@@ -29,7 +29,7 @@ function About(){
                             With an online presence gaining followers and listeners across a variety of platforms, Van The Man is staring down the barrel of another exciting year.
                             <br />
                             <br />
-                            His newest single "Linkup" is available now!!
+                            His newest single "Not Sayin" is available now!!
                             <br />
                             <br />
                             Follow Van The Man on social media and join the squad!!
