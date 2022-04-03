@@ -1,11 +1,46 @@
-.separate-row {
-    background-color: white;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-    justify-content: center;
-    align-items: center;
+.gallery-container {
+  margin-top: 2em;
+  // background-color: white;
+  h4 {
+    text-align: center;
+    padding-block: 1em;
   }
-  
+
   .image-row {
-    background-color: white;
+    margin-block: 1em;
   }
+  .vertical img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+  .horizontal img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+  }
+  @media (max-width: $screen-md) {
+    margin-top: 1em;
+    img{
+      margin-block: 1em;
+    }
+    .vertical img {
+      width: 150px;
+      height: 200px;
+    }
+    .horizontal img{
+      width: 200px;
+      height: 150px;
+    }
+  }
+  @media (max-width: $screen-sm) {
+    .vertical img {
+      width: 300px;
+      height: 300px;
+    }
+    .horizontal img {
+      width: 300px;
+      height: 200px;
+    }
+  }
+}

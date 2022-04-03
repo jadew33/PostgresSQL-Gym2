@@ -1,13 +1,16 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap"; 
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import VanTheMan from '../Assets/Handwriting/VanTheManBlack.png'
 
 function Navigation(){
     return (
         <Navbar className="top-horizontal-padding" sticky="top" expand='lg'>
             <Container className="full-width">
                 <LinkContainer to='/'>
-                    <Navbar.Brand className='title-text' href="#home">Van<span className="subtext">The</span>Man</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <img src={VanTheMan} className="nav-vantheman" alt="van the man logo"/>
+                    </Navbar.Brand>
                 </LinkContainer>
                 
                 <Navbar.Toggle />

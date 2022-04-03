@@ -16,7 +16,14 @@
     color: rgba(black, 0.7);
   }
   @media (max-width: $screen-md) {
-    margin-top: 0;
+    margin-block: 0.25em;
     margin-left: 0.5em;
+  }
+}
+
+.nav-vantheman{
+  height: 100px;
+  @media (max-width: $screen-md) {
+    height: 70px;
   }
 }

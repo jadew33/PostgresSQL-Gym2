@@ -2,8 +2,11 @@ import React from "react";
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import aboutImage from "../Assets/Images/about_page.png";
 import { IconContext } from "react-icons";
-import { BsYoutube, BsInstagram, BsFacebook } from "react-icons/bs";
-import tiktok from '../Assets/tik-tok.png';
+import tiktok from '../Assets/Handwriting/TikTok.png';
+import facebook from '../Assets/Handwriting/Facebook.png';
+import instagram from '../Assets/Handwriting/Instagram.png';
+import twitter from '../Assets/Handwriting/Twitter.png';
+import youtube from '../Assets/Handwriting/Youtube.png';
 
 function About(){
     return (
@@ -46,19 +49,23 @@ function About(){
                                 value={{ size: "50px"}}
                             >
                                 <Button href='https://www.youtube.com/channel/UCXO6tLw7YeT2Qy2CRuoAgtg' variant='outline-link'>
-                                    <BsYoutube className="social-icon" />
+                                <img src={youtube} alt="youtube " className="social-icon"/>
                                 </Button>
                                 
                                 <Button href="https://www.instagram.com/vantheman_official/" variant='outline-link'>
-                                    <BsInstagram className="social-icon" />
+                                <img src={instagram} alt="instagram" className="social-icon"/>
                                 </Button>
 
                                 <Button href="https://www.facebook.com/VanTheManOfficial" variant='outline-link'>
-                                    <BsFacebook className="social-icon" />
+                                <img src={facebook} alt="facebook" className="social-icon"/>
+                                </Button>
+
+                                <Button href="https://twitter.com/real_vantheman" variant='outline-link'>
+                                <img src={twitter} alt="twitter" className="social-icon"/>
                                 </Button>
                             
                                 <Button href="https://www.tiktok.com/@vantheman_official" variant='outline-link'>
-                                    <img src={tiktok} alt="tiktok icon" style={{height: '50px'}}/>
+                                    <img src={tiktok} alt="tiktok" className="social-icon"/>
                                 </Button>
                             </IconContext.Provider>
                             

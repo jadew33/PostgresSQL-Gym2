@@ -1,22 +1,45 @@
 .tour-contain {
-    background-color: $off-white;
-}
-
-.tour-text {
-    background-color: #00B4D8;
-    width: 30vw;
-    min-width: 250px;
-    font-family: $default;
-    white-space: pre-wrap;
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: 1px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.tour-image {
-    width: 50vw;
-    min-width: 400px;
-    margin-right: 8vh;
+    margin-top: 2em;
+    height: 100vh;
+    .current {
+        margin-top: 1em;
+    }
+    .tour-text {
+        background-color: rgba($highlight-blue, 0.4);
+        letter-spacing: 1px;
+        text-align: center;
+        border-radius: 10px;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        width: 30vw;
+    }
+    .tour-image {
+        width: 50vw;
+        min-width: 300px;
+        margin-right: 1em;
+    }
+    hr {
+        border: 1px solid black;
+        max-width: 50vw;
+    }
+    @media (max-width: $screen-md) {
+        margin-top: 1em;
+        .subtext {
+            margin-top: 1em;
+        }
+        .tour-image {
+            width: 80vw;
+        }
+        .tour-text {
+            width: 50vw;
+        }
+    }
+    @media (max-width: $screen-sm) {
+        hr {
+            max-width: 80vw;
+        }
+        .tour-text {
+            width: 80vw;
+        }
+    }
 }

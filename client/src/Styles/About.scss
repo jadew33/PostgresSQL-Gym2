@@ -1,8 +1,13 @@
 .about-container {
     padding-top: 5vh;
+    .icons-container {
+        margin-bottom: 2em;
+    }
     .social-icon {
-        margin-left: 0.25vw;
-        margin-right: 0.25vw;
+        height: 80px;
+        @media (max-width: $screen-sm) {
+            height: 40px;
+        }
     }
 
     .top-buffer {
@@ -12,9 +17,6 @@
     .about-image {
         height: 20rem;
         margin-left: 2em;
-    }
-    .icons-container {
-        margin: 1em 0 2em;
     }
 
     @media (max-width: $screen-md) {
