@@ -22,7 +22,7 @@ import React,{useEffect} from 'react';
 
 
 function Music(){
-    const [scrolled,setScrolled]=React.useState(true);
+    const [scrolled,setScrolled]=React.useState(false);
     const handleScroll=() => {
         const offset=window.scrollY;
         var box = document.querySelector('.music-contain');
@@ -40,10 +40,6 @@ function Music(){
       useEffect(() => {
         window.onscroll = (handleScroll)
       })
-    let navbarClasses=['sticky-music-player'];
-      if(scrolled){
-        navbarClasses.push('scrolled');
-    }
 
     return (
         <>
@@ -195,7 +191,8 @@ function Music(){
             </div>
             <div className="bot-space"></div>
 
-            <div className={navbarClasses.join(" ")}>
+            {/* Popup sticky player */}
+            <div className={`sticky-music-player ${scrolled && 'scrolled'}`}>
             <iframe src="https://open.spotify.com/embed/track/1wK7LQCjsY8Ix61LFqIwGv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="spotify-player"></iframe>
             </div>
             {/* Fixed single player */}
