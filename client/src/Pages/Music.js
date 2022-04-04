@@ -29,18 +29,18 @@ function Music(){
         var height = box.clientHeight;
         var width = box.clientWidth;
         if(offset > (height/2.4) && width > 700){
-            setScrolled(false);
-        } else if(offset > (height/1.3) && width <= 700){
-            setScrolled(false)
-        } else{
             setScrolled(true);
+        } else if(offset > (height/1.3) && width <= 700){
+            setScrolled(true)
+        } else{
+            setScrolled(false);
         }
       }
     
       useEffect(() => {
         window.onscroll = (handleScroll)
       })
-    let navbarClasses=['navbar'];
+    let navbarClasses=['sticky-music-player'];
       if(scrolled){
         navbarClasses.push('scrolled');
     }
@@ -196,6 +196,10 @@ function Music(){
             <div className="bot-space"></div>
 
             <div className={navbarClasses.join(" ")}>
+            <iframe src="https://open.spotify.com/embed/track/1wK7LQCjsY8Ix61LFqIwGv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="spotify-player"></iframe>
+            </div>
+            {/* Fixed single player */}
+            <div className='navbar'>
             <iframe src="https://open.spotify.com/embed/track/1wK7LQCjsY8Ix61LFqIwGv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="spotify-player"></iframe>
             </div>
             <div className="bot-space"></div>
