@@ -1,6 +1,15 @@
+.scrolled{
+    position: fixed;
+    bottom: 0;
+    width: 77%;
+    left: 11.5%;
+  }
+
+
+
 .music-contain{
+    overflow: visible;
     padding-top: 3vh;
-    height:vmax;
     text-align: center;
     position: relative;
     width: 100%;
@@ -65,12 +74,7 @@ p{
     box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3);
 }
 
-.bot-player{
-    width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-}
+
 
 iframe{
     border-radius: 20px;
@@ -136,5 +140,10 @@ iframe{
 
     .more-music iframe{
         width: 85%;
+    }
+
+    .scrolled{
+        width: 90%;
+        left: 5%;
     }
 }

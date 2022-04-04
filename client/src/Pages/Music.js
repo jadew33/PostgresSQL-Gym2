@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import vogue from "../Assets/Music/vogue.png";
 import vibin from "../Assets/Music/vibin.png";
@@ -14,7 +14,37 @@ import deezer from "../Assets/Music/deezer.png";
 import youtube from "../Assets/Music/youtube.png";
 
 
+        
+
+
+
+import React,{useEffect} from 'react';
+
+
 function Music(){
+    const [scrolled,setScrolled]=React.useState(true);
+    const handleScroll=() => {
+        const offset=window.scrollY;
+        var box = document.querySelector('.music-contain');
+        var height = box.clientHeight;
+        var width = box.clientWidth;
+        if(offset > (height/2.4) && width > 700){
+            setScrolled(false);
+        } else if(offset > (height/1.3) && width <= 700){
+            setScrolled(false)
+        } else{
+            setScrolled(true);
+        }
+      }
+    
+      useEffect(() => {
+        window.onscroll = (handleScroll)
+      })
+    let navbarClasses=['navbar'];
+      if(scrolled){
+        navbarClasses.push('scrolled');
+    }
+
     return (
         <>
             <Container fluid="sm" className = "music-contain">
@@ -165,15 +195,17 @@ function Music(){
             </div>
             <div className="bot-space"></div>
 
-            <div className="bot-player">
+            <div className={navbarClasses.join(" ")}>
             <iframe src="https://open.spotify.com/embed/track/1wK7LQCjsY8Ix61LFqIwGv?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="spotify-player"></iframe>
             </div>
-            
+            <div className="bot-space"></div>
+            <div className="bot-space"></div>
             
             </Container>
 
-     
+            
         </>
+        
         );
 }
 
