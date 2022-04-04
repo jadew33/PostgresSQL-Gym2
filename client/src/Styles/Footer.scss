@@ -18,8 +18,12 @@
 
     .button{
         font-family: $display;
-        padding: 5px 15px;
+        padding: 8px 20px;
         opacity: 1;
+        background-color: $off-white;
+        border-radius: 8px;
+        border: none;
+        color: black;
         transition: all 350ms ease-in-out;
         &:hover{
             opacity: .9;
