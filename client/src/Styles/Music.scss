@@ -8,6 +8,9 @@
 }
 .scrolled {
     bottom: -20vh;
+    @media (orientation: landscape) {
+        bottom: -30vh;
+    }
 }
 
 .music-contain {

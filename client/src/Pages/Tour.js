@@ -13,7 +13,7 @@ function Tour() {
                     </Col>
                     <Col >
                         <p className="subtext">Past Tours</p>
-                        <hr />
+                        <hr className=""/>
                         <div className="tour-text">
                             <p>
                                 Saturday, Sept. 11, 2021
@@ -28,8 +28,8 @@ function Tour() {
                 <Row className="top-buffer">
                     <Col>
                         <p className="subtext current">Current Tours</p>
-                        <hr />
-                        <p>
+                        <hr className="current-hr"/>
+                        <p className="check-back">
                             Check Back Soon!
                         </p>
                     </Col>

@@ -231,6 +231,12 @@
     }
 }
 
+@media (orientation: landscape) {
+   .Guestbook{
+    height: 600px;
+   }
+}
+
 .submit-button {
     width: 40%;
     align-self: center;

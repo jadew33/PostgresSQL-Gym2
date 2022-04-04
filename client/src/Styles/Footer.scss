@@ -49,3 +49,11 @@
         }
     }
 }
+
+@media (orientation: landscape) {
+    .footer{
+        .mc-field-group{
+            margin-block: 5px;
+        }
+    }
+}

@@ -8,6 +8,9 @@
         @media (max-width: $screen-sm) {
             height: 40px;
         }
+        @media (orientation: landscape){
+            height: 40px;
+        }
     }
 
     .top-buffer {

@@ -11,6 +11,9 @@
     @media (max-width: $screen-md) {
         width: 100vw;
     }
+    @media (orientation: landscape) {
+        width: 100vh;
+    }
 }
 
 .video-responsive {
