@@ -1,29 +1,47 @@
 // import { Link } from "react-router-dom";
+import { Formik, Field, Form } from "formik";
+import Axios from "axios";
 
 export default function ClientProfile(props) {
   return (
-    <div>
-      <h1>Manage your profile</h1>
-      <label htmlFor="name">Name: </label>
-      <input type="text" id="name" name="name" />
+    <Formik
+      initialValues={{
+        username: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+      }}
+      onSubmit={async (values, { resetForm }) => {
+        console.log(values);
+        resetForm({ values: "" });
+        Axios.post("http://localhost:5000/addUser", { data: values })
+          .then((res) => {
+            console.log("success");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }}
+    >
+      <Form className="flex-col">
+        <label htmlFor="email">Email Address</label>
+        <Field id="email" name="email" type="email" />
 
-      <label htmlFor="age">age: </label>
-      <input type="text" id="age" name="age" />
+        <label htmlFor="firstName">First Name</label>
+        <Field id="firstName" name="firstName" type="firstName" />
 
-      <label htmlFor="gender">gender: </label>
-      <input type="text" id="gender" name="gender" />
+        <label htmlFor="lastName">Last Name</label>
+        <Field id="lastName" name="lastName" type="lastName" />
 
-      <label htmlFor="address">address: </label>
-      <input type="text" id="address" name="address" />
+        <label htmlFor="lastName">Username</label>
+        <Field id="username" name="username" type="username" />
 
-      <label htmlFor="fitnessLevel">fitnessLevel: </label>
-      <input type="text" id="fitnessLevel" name="fitnessLevel" />
+        <label htmlFor="password">Password</label>
+        <Field id="password" name="password" type="password" />
 
-      <label htmlFor="hoursPerWeek">hoursPerWeek: </label>
-      <input type="text" id="hoursPerWeek" name="hoursPerWeek" />
-
-      <label htmlFor="interests">interests: </label>
-      <input type="text" id="interests" name="interests" />
-    </div>
+        <button type="submit">Submit</button>
+      </Form>
+    </Formik>
   );
 }

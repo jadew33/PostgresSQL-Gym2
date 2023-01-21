@@ -1,11 +1,24 @@
 import { Link } from "react-router-dom";
 
-export default function ClientNav(props) {
+export default function ClientNav() {
+  const user = sessionStorage.getItem("loggedInUser");
+  console.log(user);
   return (
-    <div>
+    <div className="nav">
       <h1>The Training Room</h1>
-      <Link to="/client/profile">Profile</Link>
-      <Link to="/client/schedule">Schedule</Link>
+      {user && (
+        <>
+          <h3>Welcome {user}</h3>
+          <div>
+            <Link to="/client/profile" className="link">
+              Profile
+            </Link>
+            <Link to="/client/schedule" className="link">
+              Schedule
+            </Link>
+          </div>
+        </>
+      )}
     </div>
   );
 }

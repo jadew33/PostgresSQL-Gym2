@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import { Formik, useFormik, Field, Form } from "formik";
+import { Formik, Field, Form } from "formik";
 import Axios from "axios";
 
 export default function AdminUsers(props) {
@@ -16,7 +16,7 @@ export default function AdminUsers(props) {
         console.log(values);
         resetForm({ values: "" });
         Axios.post("http://localhost:5000/addUser", { data: values })
-          .then(() => {
+          .then((res) => {
             console.log("success");
           })
           .catch((err) => {
@@ -24,51 +24,21 @@ export default function AdminUsers(props) {
           });
       }}
     >
-      <Form>
+      <Form className="flex-col">
         <label htmlFor="email">Email Address</label>
-        <Field
-          id="email"
-          name="email"
-          type="email"
-          // onChange={formik.handleChange}
-          // value={formik.values.email}
-        />
+        <Field id="email" name="email" type="email" />
 
         <label htmlFor="firstName">First Name</label>
-        <Field
-          id="firstName"
-          name="firstName"
-          type="firstName"
-          // onChange={formik.handleChange}
-          // value={formik.values.firstName}
-        />
+        <Field id="firstName" name="firstName" type="firstName" />
 
         <label htmlFor="lastName">Last Name</label>
-        <Field
-          id="lastName"
-          name="lastName"
-          type="lastName"
-          // onChange={formik.handleChange}
-          // value={formik.values.lastName}
-        />
+        <Field id="lastName" name="lastName" type="lastName" />
 
         <label htmlFor="lastName">Username</label>
-        <Field
-          id="username"
-          name="username"
-          type="username"
-          // onChange={formik.handleChange}
-          // value={formik.values.username}
-        />
+        <Field id="username" name="username" type="username" />
 
         <label htmlFor="password">Password</label>
-        <Field
-          id="password"
-          name="password"
-          type="password"
-          // onChange={formik.handleChange}
-          // value={formik.values.password}
-        />
+        <Field id="password" name="password" type="password" />
 
         <button type="submit">Submit</button>
       </Form>

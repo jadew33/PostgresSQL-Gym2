@@ -1,4 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap");
+
 body {
+  background-color: #e9edc9;
+  color: #344e41;
+
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.nav {
+  margin-bottom: 20px;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  div > * {
+    margin-inline: 10px;
+    font-size: 23px;
+  }
+}
+
+.flex-col {
   display: flex;
   flex-direction: column;
+  button {
+    margin-top: 35px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #3a5a40;
+    color: white;
+    transition: 500ms linear all;
+    &:hover {
+      background-color: #588157;
+    }
+  }
+}
+
+Form {
+  font-size: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.link {
+  color: #1d3557;
 }

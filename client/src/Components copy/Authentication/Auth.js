@@ -1,7 +1,9 @@
-import { Formik, useFormik, Field, Form } from "formik";
+import { Formik, Field, Form } from "formik";
+import { redirect } from "react-router-dom";
 import Axios from "axios";
 
 export default function Auth(props) {
+  console.log(sessionStorage);
   return (
     <Formik
       initialValues={{
@@ -12,15 +14,25 @@ export default function Auth(props) {
         console.log(values);
         resetForm({ values: "" });
         Axios.post("http://localhost:5000/login", { data: values })
-          .then(() => {
-            console.log("success");
+          .then((res) => {
+            console.log(res.data);
+            if (res.data.loggedIn) {
+              sessionStorage.setItem(
+                "loggedInUser",
+                res.data.isAdmin ? "admin" : "client"
+              );
+            }
+            return res.data.isAdmin
+              ? redirect("/admin/profile")
+              : redirect("/client/profile");
           })
+
           .catch((err) => {
             console.log(err);
           });
       }}
     >
-      <Form>
+      <Form className="flex-col">
         <label htmlFor="lastName">Username</label>
         <Field id="username" name="username" type="username" />
 
